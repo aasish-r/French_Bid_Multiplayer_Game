@@ -26,32 +26,6 @@ typedef struct g_player {
 	int bid;
 }player;
 
-void printsuite(int suite)
-{
-	if(suite==1)
-		printf("SPADES-");
-	else if(suite==2)
-		printf("CLUBS-");
-	else if(suite==3)
-		printf("HEARTS-");
-	else
-		printf("DIAMONDS-");
-}
-
-void printrank(int rank)
-{
-	if(rank==11)
-		printf("J ");
-	else if(rank==12)
-		printf("Q ");
-	else if(rank==13)
-		printf("K ");
-	else if(rank==14)
-		printf("A ");
-	else
-		printf("%d ", rank);
-}
-
 void printcard(card c)
 {
 	if(c.suite==1)
