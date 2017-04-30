@@ -176,8 +176,10 @@ void giveScores(int players,player plist[],int roundno,int level,int trump){
 				sum++;
 			}
 			int bid=plist[cn].bid;
-			if(bid==0)	plist[cn].score+=(roundno*level);
-			else{
+			if(bid==sum){
+				if(bid==0)	plist[cn].score+=(roundno*level);
+				else	plist[cn].score+=(bid*(roundno*level));
+			}else{
 				if(bid>sum)
 					plist[cn].score-=((bid-sum)*level);
 				else
